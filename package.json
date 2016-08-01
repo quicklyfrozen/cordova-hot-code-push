@@ -1,9 +1,9 @@
 {
-  "name": "cordova-hot-code-push-plugin",
+  "name": "com.apreta.HotCodePush",
   "version": "1.4.0",
   "description": "Cordova plugin to perform code updates on the fly",
   "cordova": {
-    "id": "cordova-hot-code-push-plugin",
+    "id": "com.apreta.HotCodePush",
     "platforms": [
       "android",
       "ios"

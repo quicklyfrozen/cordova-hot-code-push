@@ -124,8 +124,9 @@ static NSString *const DEFAULT_STARTING_PAGE = @"index.html";
     BOOL isApplicationUpdated = ![[NSBundle applicationBuildVersion] isEqualToString:_pluginInternalPrefs.appBuildVersion];
     BOOL isWWwFolderExists = [fileManager fileExistsAtPath:_filesStructure.wwwFolder.path];
     BOOL isWWwFolderInstalled = _pluginInternalPrefs.isWwwFolderInstalled;
-    
-    return isApplicationUpdated || !isWWwFolderExists || !isWWwFolderInstalled;
+    BOOL isUpdateURLSet = _pluginXmlConfig.configUrl != nil;
+  
+    return isUpdateURLSet && (isApplicationUpdated || !isWWwFolderExists || !isWWwFolderInstalled);
 }
 
 /**
