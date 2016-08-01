@@ -1,3 +1,25 @@
+# Changes from parent version
+
+I'm not using the local development option so I found it inconvenient that "cordova run" would not result in new code
+running on the device unless the previous version was uninstalled first.
+
+This version of the plugin is changed to not copy the 'www' tree to local storage if the config URL is not set.  I use
+the following chcpbuild.options and enable the 'dev' build:
+
+```
+{
+  "dev": {
+    "config-file": "",
+    "auto-download": {
+        "enabled": false
+    },
+    "auto-install": {
+        "enabled": false
+    }
+  }
+}
+```
+
 # Cordova Hot Code Push Plugin
 
 This plugin provides functionality to perform automatic updates of the web based content in your application. Basically, everything that is stored in `www` folder of your Cordova project can be updated using this plugin.
